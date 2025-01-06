@@ -65,6 +65,18 @@ header {
     flex-wrap: wrap;
 }
 
+header>.container {
+    flex-direction: row-reverse;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburgerCheck {
+    display: none;
+}
+
 header nav ul {
     display: flex;
     list-style: none;
@@ -231,6 +243,7 @@ main {
 
 .galleryClass {
     display: grid;
+    padding: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
@@ -389,16 +402,20 @@ footer {
 /*טאבלט */
 @media (max-width: 1199.98px) {
     .galleryClass {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-rows: auto;
+        gap: 20px;
     }
 
     .galleryItem {
-        width: calc(100vw / 2 - 20px);
+        margin: auto;
+        width: 100%;
+        align-items: center;
     }
 
+
     .galleryItem img {
-        width: calc(100vw / 2 - 20px);
+        width: 100%;
     }
 
     #contact>img {
@@ -408,17 +425,49 @@ footer {
 
 /* טלפון */
 @media (max-width: 767.98px) {
+
+    header {
+        height: auto;
+    }
+
+    .hamburger {
+        display: block;
+        position: relative;
+        right: 30px;
+        font-size: 2rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .hamburgerCheck:checked~nav {
+        display: block;
+    }
+
+    header>.container {
+        align-items: start
+    }
+
+
     .galleryClass {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: auto;
     }
 
     .galleryItem {
-        width: 100vw;
+        width: 100%;
     }
 
+
     .galleryItem img {
-        width: 100vw;
+        width: 100%;
     }
 
     #contact>img {
@@ -427,5 +476,11 @@ footer {
 
     .languages {
         display: none;
+    }
+
+    /* footer*/
+    footer #footerText {
+        display: none;
+        margin: 20px;
     }
 }

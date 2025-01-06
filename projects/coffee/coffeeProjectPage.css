@@ -76,12 +76,14 @@ header .container {
     font-size: 1.75rem;
     text-decoration: none;
     align-items: center;
+    color: var(--text-color);
 }
 
 .logoName img {
     width: 50px;
     height: 50px;
     margin: 10px;
+    border-radius: 50%;
 }
 
 /* גוף האתר*/

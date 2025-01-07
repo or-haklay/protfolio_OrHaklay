@@ -480,6 +480,10 @@ footer {
         display: none;
     }
 
+    #contact form {
+        padding: 50px 50px 50px 50px;
+    }
+
     /* footer*/
     footer #footerText {
         display: none;

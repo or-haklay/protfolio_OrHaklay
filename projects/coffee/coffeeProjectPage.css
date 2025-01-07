@@ -241,4 +241,25 @@ footer {
         display: none;
         margin: 20px;
     }
+
+    #mainText a {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        padding: 10px 10px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 1rem;
+        box-shadow: 2px 2px 2px #000;
+        margin: 20px;
+    }
+
+    .mediaContact img {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+    }
+
+    .mediaContact p {
+        font-size: 1rem;
+    }
 }

@@ -15,26 +15,26 @@
 
 <body>
     <div class="container">
-        <img src="Image 1@2x.png" alt="phone-background">
+        <img src="Image 1@2x.png" alt="phone-background" id="bgcImg">
         <div class="formContainer">
             <div class="textControl">
                 <h1>ייעוץ חינם</h1>
                 <p>לקבלת ייעוץ חינם, מוזמנים להשאיר פרטים ומומחה יחזור אליכם עם מענה.</p>
             </div>
             <form>
-                <div class="form-control">
+                <div class="form-control" id="name-control">
                     <label for="name"> שם מלא</label>
                     <input type="text" id="name" required />
                 </div>
-                <div class="form-control">
+                <div class="form-control" id="email-control">
                     <label for="email">דוא"ל</label>
                     <input type="email" id="email" required />
                 </div>
-                <div class="form-control">
+                <div class="form-control" id="massege-control">
                     <label for="massege">ההודעה</label>
                     <textarea name="userMassege" id="massege"></textarea>
                 </div>
-                <input type="submit" value="שליחה" class="form-bottom">
+                <input type="submit" value="שליחה" id="form-button">
             </form>
         </div>
     </div>
@@ -51,7 +51,7 @@
         <a href="" class="logo">
             <img src="Icon simple-whatsapp-1.svg" alt="Phone">
         </a>
-        <a href="" class="logo">
+        <a href="" class="logo" id="whatsapp">
             <img src="Icon simple-whatsapp.svg" alt="whatsapp">
         </a>
     </div>

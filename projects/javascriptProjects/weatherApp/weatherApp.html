@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weatherApp.css">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="https://openweathermap.org/img/wn/02d@2x.png" type="image/x-icon" id="shortIcon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="formControl">
+            <label for="inputCity">Search:</label>
+            <input type="text" id="inputCity">
+            <div id="defultControl">
+                <label for="defultCity">Set As Defult:</label>
+                <input type="checkbox" name="defultCity" id="defultCity">
+            </div>
+            <button id="btn">Send</button>
+        </div>
+        <div class="weatherInfo">
+            <h1 id="city"></h1>
+            <p id="temp"></p>
+
+            <p id="errorMassege"></p>
+        </div>
+        <div class="weatherInfo">
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="icon" id="weatherIcon">
+            <p id="description"></p>
+        </div>
+        <div class="weatherInfo">
+            <div id="wind"></div>
+        </div>
+
+    </div>
+
+    <script src="weatherApp.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<h1>How to Play Tic-Tac-Toe</h1>
+    <p>Welcome to the X O Game! This classic and fun game is easy to play, but requires strategy to win. Follow these simple steps to learn how to play:</p>
+    <h2>Game Objective</h2>
+    <p>The goal of the game is to get three of your marks (either X or O) in a row, column, or diagonal before your opponent does.</p>
+    <h2>How to Play</h2>
+    <ol>
+        <li>
+            <h4>Start the Game</h4>
+            <ul>
+                <li>The game board consists of a 3x3 grid.</li>
+                <li>One player is assigned X, and the other player is assigned O.</li>
+            </ul>
+        </li>
+        <li>
+            <h4>Making a Move</h4>
+            <ul>
+                <li>Players take turns placing their symbol (X or O) in an empty square on the board.</li>
+                <li>Tap or click on a square to place your mark.</li>
+            </ul>
+        </li>
+        <li>
+            <h4>Winning the Game</h4>
+            <ul>
+                <li>A player wins when they place three of their symbols in a row, either:</li>
+                <ul>
+                    <li>Horizontally (left to right)</li>
+                    <li>Vertically (top to bottom)</li>
+                    <li>Diagonally (corner to corner)</li>
+                </ul>
+            </ul>
+        </li>
+        <li>
+            <h4>Game Over Conditions</h4>
+            <ul>
+                <li>If a player gets three in a row, they win!</li>
+                <li>If all squares are filled and no player has won, the game ends in a draw.</li>
+            </ul>
+        </li>
+    </ol>

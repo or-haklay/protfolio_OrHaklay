@@ -1,9 +1,9 @@
-const cells = document.querySelectorAll('.cell');
-const resetBtn = document.querySelector('#resetBtn');
-const board = document.getElementById('board');
-const bombsCounter = document.getElementById('bombsCounter');
+let cells = document.querySelectorAll('.cell');
+let resetBtn = document.querySelector('#resetBtn');
+let board = document.getElementById('board');
+let bombsCounter = document.getElementById('bombsCounter');
 let gameOn = false;
-let bombsNum = 30;
+let bombsNum = 40;
 let boomCounterValue = bombsNum;
 let bombs = [];
 let boardMaker = {};
@@ -102,7 +102,8 @@ function revealCell(cell) {
             }
         }
     }
-    checkWin();
+    setTimeout(checkWin(), 500)
+        ;
 }
 //סימון תא
 function toggleFlag(cell) {
@@ -186,7 +187,7 @@ function checkWin() {
 
     if (clickedCells.length == (boardSize * boardSize - bombsNum)) {
         stopTimer();
-        resetBtn.setAttribute('src', './images/smileyWin.png');
+        resetBtn.setAttribute('src', './images/smileyWon.png');
         alert(`You Won! Time: ${time} seconds`)
     }
 }
@@ -217,7 +218,6 @@ function resetTimer() {
 
 }
 
-
 //יזימת יצירת לוח וריסטרט
 createBoard()
 resetBtn.addEventListener('click', () => {
@@ -226,3 +226,59 @@ resetBtn.addEventListener('click', () => {
 })
 
 
+
+
+//level settings
+const settingBtn = document.getElementById('settingBtn')
+const settingControl = document.getElementById('settingControl')
+const btnLevel = document.querySelectorAll('.levelBtn');
+
+settingBtn.addEventListener('click', () => {
+    settingControl.style.display = 'flex';
+})
+
+btnLevel.forEach(element => {
+    element.addEventListener('click', () => {
+        let level = element.getAttribute('id');
+        levelSelector(level);
+    })
+});
+
+//הגדרות רמות קושי
+function levelSelector(level) {
+    const header = document.querySelector('.header');
+    if (level == 'easy') {
+        bombsNum = 10;
+        boardSize = 9;
+        createBoard();
+        header.style.maxWidth = `calc(50px*9)`
+        cells = document.querySelectorAll('.cell');
+        cells.forEach(element => {
+            element.style.width = `calc(95vw/9)`;
+            element.style.height = `calc(100vw/9)`;
+        });
+    }
+    else if (level == 'medium') {
+        bombsNum = 40;
+        boardSize = 16;
+        createBoard();
+        header.style.maxWidth = `calc(50px*16)`
+        cells = document.querySelectorAll('.cell');
+        cells.forEach(element => {
+            element.style.width = `calc(95vw/16)`;
+            element.style.height = `calc(100vw/16)`;
+        });
+    }
+    else if (level == 'hard') {
+        bombsNum = 99;
+        boardSize = 22;
+        createBoard();
+        header.style.maxWidth = `calc(50px*22)`
+        cells = document.querySelectorAll('.cell');
+        cells.forEach(element => {
+            element.style.width = `calc(95vw/22)`;
+            element.style.height = `calc(90vh/22)`;
+        });
+    }
+    settingControl.style.display = 'none';
+}

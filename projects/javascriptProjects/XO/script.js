@@ -23,7 +23,7 @@ function handleCellClick(event) {
     const index = event.target.getAttribute("id");
 
     /* event.target.textContent = currentPlayer; */
-    event.target.innerHTML = `<img src="/XO/images/${currentPlayer}.png" alt="${currentPlayer}" class="playerImg"></img>`
+    event.target.innerHTML = `<img src="./images/${currentPlayer}.png" alt="${currentPlayer}" class="playerImg"></img>`
     event.target['cell-status'] = currentPlayer;
     board[index] = currentPlayer;
     currentPlayer = currentPlayer === "X" ? "O" : "X";
@@ -64,6 +64,10 @@ function check() {
         updateWinninng();
         return isGameActive = false;
       }
+      else if (round === 9) {
+        statusElement.innerText = `It's a Draw... Let's Play Again! `;
+        return isGameActive = false;
+      }
     }
   }
 }
@@ -76,6 +80,7 @@ function updateWinninng() {
 resetButton.addEventListener('click', () => {
   currentPlayer = "X";
   isGameActive = true;
+  round = 0;
   board = Array(9).fill(null);
   statusElement.innerText = `Player ${currentPlayer} 's turn`
   cells.forEach((cell) => cell.textContent = '');

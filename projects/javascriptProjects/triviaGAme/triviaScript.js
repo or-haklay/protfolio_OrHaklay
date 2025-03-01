@@ -196,7 +196,6 @@ function startTimer() {
   timerElement.textContent = `${timeLeft}`;
   timer = setInterval(() => {
     timeLeft--;
-    console.log("secend");
 
     timerElement.textContent = `${timeLeft}`;
     if (timeLeft <= 0) {

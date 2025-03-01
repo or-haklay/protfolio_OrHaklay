@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Game</title>
+    <script type="module" src="./triviaScript.js"></script>
+    <script type="module" src="./bank.js"></script>
+    <link rel="stylesheet" href="triviaStyle.css" />
+    <link rel="shortcut icon" href="./logo.webp" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="homeScreen">
+        <img src="./logo.webp" alt="logo" />
+        <h1>Select a Subject:</h1>
+        <div class="btnControl">
+          <button class="btn" data-subject="geography">Geography</button>
+          <button class="btn" data-subject="moviesTV">Movies & TV</button>
+          <button class="btn" data-subject="general">General Knowledge</button>
+          <button class="btn" data-subject="sports">Sports</button>
+        </div>
+        <button id="infoBtn">?</button>
+      </div>
+
+      <div id="gameScreen" style="display: none">
+        <p id="timer">Time left: 60</p>
+        <h2 id="mainSub"></h2>
+
+        <p id="secondly">Select Your Answer:</p>
+        <div class="btnControl">
+          <button class="answerBtn" id="btn1"></button>
+          <button class="answerBtn" id="btn2"></button>
+          <button class="answerBtn" id="btn3"></button>
+          <button class="answerBtn" id="btn4"></button>
+        </div>
+        <button id="backHomeBtnInGame">Back Home</button>
+      </div>
+
+      <div id="resultScreen" style="display: none">
+        <h2>Game Over!</h2>
+        <p id="scoreDisplay"></p>
+        <button class="EndBtn" id="restartBtn">Play Again</button>
+        <button class="EndBtn" id="backHomeBtn">Home</button>
+      </div>
+
+      <div id="infScreen" style="display: none">
+        <h2>Game Rules:</h2>
+        <ul>
+          <li>
+            Choose a Category – Select one of the available trivia categories
+            before starting the game.
+          </li>
+          <li>
+            Answer 10 Questions – You will receive 10 random questions from your
+            chosen category.
+          </li>
+          <li>Time Limit – You have 60 seconds to answer each question.</li>
+          <li>
+            Four Answer Choices – Each question has one correct answer and three
+            incorrect options.
+          </li>
+          <li>
+            No Changing Answers – Once you select an answer, you cannot change
+            it.
+          </li>
+          <li>Scoring System – You earn 1 point for each correct answer.</li>
+          <li>
+            Game Over – The game ends when all 10 questions are answered or time
+            runs out.
+          </li>
+          <li>
+            Final Score – Your total score will be displayed at the end of the
+            game.
+          </li>
+          <li>
+            Play Again – You can restart the game and try to beat your previous
+            score.
+          </li>
+          <li>Have Fun! – Enjoy the challenge and test your knowledge!</li>
+        </ul>
+        <button id="infoCloseBtn">X</button>
+      </div>
+    </div>
+  </body>
+</html>

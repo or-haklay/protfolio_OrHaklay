@@ -14,7 +14,8 @@
     --text-color: #FFFFFF;
     --bgc-color: #F5F5F5;
     --bold1-color: #F97316;
-    --bold2-color: #10B981;
+    /* --bold2-color: #0d816e; */
+    --bold2-color: #182b5f;
 }
 
 html {
@@ -141,7 +142,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: 30vh;
     justify-content: space-evenly;
     max-height: 500px;
 }
@@ -155,9 +156,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     width: 100vw;
-    box-shadow: 1px 1px 3px #000;
+    /* box-shadow: 1px 1px 3px #000; */
     flex-wrap: wrap;
     height: auto;
 }
@@ -171,6 +172,7 @@ main {
     height: 75px;
     margin: 10px;
     transition: all 0.5s ease-in-out;
+    border-radius: 50%;
 }
 
 .languages img:hover {

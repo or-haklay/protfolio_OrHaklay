@@ -30,7 +30,7 @@
 <!-- הוספת מוצר -->
 <section
   id="addItemSection"
-  class="row justify-content-center m-5 border border-2 p-5 bg-body d-flex flex-column align-items-center col-4"
+  class="row justify-content-center m-5 border border-2 p-5 bg-body d-flex flex-column align-items-center "
 >
   <label for="itemNameInput">שם המוצר</label>
   <input
@@ -72,7 +72,7 @@
 </section>
 
 <!-- אני בסופר-->
-<div id="myListScreen d-flex flex-column col-8">
+<div id="myListScreen d-flex flex-column">
   <div id="buyListContainer" class="border mx-2 d-flex flex-column p-2">
     <h1 class="text-center">הרשימה שלי</h1>
     <p id="listMasseges" class="text-center"></p>

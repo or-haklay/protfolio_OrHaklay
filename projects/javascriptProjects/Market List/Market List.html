@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" spellcheck="false">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Market List.css" />
+    <script defer src="Market List.js"></script>
+    <title>Market List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="./icon.webp" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="buildMyListNavBtn"
+                  aria-current="page"
+                  href="#"
+                  onclick="changeScreen('buildMyListScreen', this)"
+                >
+                  הרשימה שלי
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="myListNavBtn"
+                  onclick="changeScreen('myListScreen', this)"
+                  >אני בסופר</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="infoNavBtn"
+                  onclick="changeScreen('infoScreen', this)"
+                  >הוראות שימוש</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="mainScreen" class="container">
+      <!-- הוספת מוצר -->
+      <section
+        id="addItemSection"
+        class="row justify-content-center m-5 border border-2 p-5 bg-body flex-column align-items-center"
+        style="display: none"
+      >
+        <label for="itemNameInput">שם המוצר</label>
+        <input
+          id="itemNameInput"
+          type="text"
+          class="form-control"
+          placeholder="הכנס מוצר"
+        />
+        <label for="categoryInput">קטגוריה</label>
+        <select name="categoryInput" id="categoryInput" class="form-control">
+          <option value="other" selected>בחר קטגוריה</option>
+          <option value="fruits_vegetables">פירות וירקות</option>
+          <option value="dairy">מוצרי חלב</option>
+          <option value="meat_fish_eggs">בשר, דגים וביצים</option>
+          <option value="bakery">מאפים ולחמים</option>
+          <option value="drinks">שתייה</option>
+          <option value="frozen_food">מזון קפוא</option>
+          <option value="cleaning_products">מוצרי ניקיון</option>
+          <option value="snacks_sweets">חטיפים וממתקים</option>
+          <option value="dry_goods">מוצרים יבשים</option>
+          <option value="spices_sauces">תבלינים ורטבים</option>
+          <option value="toiletries">טואלטיקה</option>
+          <option value="pet_supplies">חיות מחמד</option>
+          <option value="alcohol">אלכוהול</option>
+          <option value="baby_products">מוצרי תינוקות</option>
+          <option value="other">אחר...</option>
+        </select>
+
+        <label for="itemAmountInput">כמות</label>
+        <input
+          id="itemAmountInput"
+          type="number"
+          class="form-control"
+          placeholder="הכנס כמות"
+        />
+        <button
+          id="addItemAndSaveBtn"
+          class="btn btn-primary m-2 align-self-lg-end"
+        >
+          שמור
+        </button>
+      </section>
+
+      <!-- הרשימה שלי-->
+      <div id="buildMyListScreen" class="flex-column" style="display: flex">
+        <button id="addItemBtn" class="btn btn-primary my-5 mx-2" type="submit">
+          הוסף מוצר
+        </button>
+        <div id="buildListContainer" class="border mx-2 d-flex flex-column p-2">
+          <h2>אין פריטים ברשימה</h2>
+          <p id="listMasseges" class="text-center"></p>
+        </div>
+      </div>
+
+      <!-- אני בסופר -->
+      <div id="myListScreen" class="flex-column" style="display: none">
+        <div id="buyListContainer" class="border m-2 d-flex flex-column p-2">
+          <h2>אין פריטים ברשימה</h2>
+        </div>
+        <button
+          id="doneBuyBtn"
+          class="btn btn-primary m-2 align-self-lg-end"
+          type="submit"
+        >
+          סיימתי
+        </button>
+      </div>
+
+      <!-- הוראות שימוש -->
+      <div id="infoScreen" style="display: none">
+        <div class="d-flex flex-column border m-5 p-5 container text-center">
+          <h1>📌 הוראות שימוש</h1>
+          <p>האפליקציה מאפשרת לך ליצור ולנהל רשימת קניות בקלות.</p>
+
+          <h2>🛒 הוספת מוצר</h2>
+          <ul class="list-unstyled">
+            <li>לחץ על <b>"הוסף מוצר"</b>.</li>
+            <li>הכנס שם, קטגוריה וכמות.</li>
+            <li>לחץ על <b>"שמור"</b> להוספה לרשימה.</li>
+          </ul>
+
+          <h2>✏️ עריכת רשימה</h2>
+          <ul class="list-unstyled">
+            <li>ניתן לשנות כמות בשדה המספרי.</li>
+            <li>לחץ על <b>"הסר"</b> כדי למחוק מוצר.</li>
+          </ul>
+
+          <h2>🏪 קניות בסופר</h2>
+          <ul class="list-unstyled">
+            <li>עבור למסך <b>"אני בסופר"</b>.</li>
+            <li>סמן מוצרים שנקנו.</li>
+            <li>לחץ על <b>"סיימתי"</b> להסרת המוצרים שנקנו.</li>
+          </ul>
+
+          <h2>📂 שמירת רשימה</h2>
+          <p>הרשימה נשמרת אוטומטית, גם לאחר רענון הדף.</p>
+
+          <h2>📲 ניווט</h2>
+          <ul class="list-unstyled">
+            <li><b>"הרשימה שלי"</b> – ניהול הרשימה.</li>
+            <li><b>"אני בסופר"</b> – סימון מוצרים שנקנו.</li>
+            <li><b>"הוראות שימוש"</b> – מידע נוסף.</li>
+          </ul>
+
+          <p>✅ קניות מהירות ויעילות יותר! 🚀</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

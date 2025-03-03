@@ -16,6 +16,7 @@ const infScreen = document.querySelector("#infScreen");
 const infoBtn = document.querySelector("#infoBtn");
 const infoCloseBtn = document.querySelector("#infoCloseBtn");
 const backHomeBtnInGame = document.querySelector("#backHomeBtnInGame");
+const qNumber = document.querySelector("#qNumber");
 
 //משתנים
 let selectedSub = "";
@@ -161,7 +162,7 @@ function checkAnswer(button, correctAnser) {
 //הצגת שאלה
 function showQuestion() {
   console.log(currentQuestionIndex);
-
+  qNumber.innerHTML = `${currentQuestionIndex + 1}/10`;
   if (currentQuestionIndex >= quiz.length) {
     endGame();
     return;

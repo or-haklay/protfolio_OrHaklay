@@ -140,15 +140,15 @@ function buildItemElementList(item) {
   );
 
   itemDiv.innerHTML = `
-    <p class="fs-1 col-1 text-center">${item.icon}</p>
-    <div class="col-7">
+    <p class="fs-1 col text-center">${item.icon}</p>
+    <div class="col">
         <h2>${item.name}</h2>
         <p>${item.categoryString}</p>
     </div>
-<input type="number" name="amount" class="form-control col mx-2"
+<input type="number" name="amount" class="form-control col-1 mx-2"
   style="width:80px;" value="${item.amount}"
   onchange="updateItemAmount(event, ${item.id})" />
-    <button type="button-2 " class="col-2 btn btn-danger m-2" onClick="removeItem(${item.id})" >הסר</button>
+    <button type="button-2 " class="col col-lg-2 btn btn-danger m-2" onClick="removeItem(${item.id})" >הסר</button>
     </div>
   `;
   return itemDiv;
@@ -267,8 +267,8 @@ function buildItemBuyList(item) {
     : "";
 
   itemDiv.innerHTML = `
-        <p class="fs-1 col-1 text-center">${item.icon}</p>
-        <div class="col-8" style="${textDecoration}">
+        <p class="fs-1 col-2 text-center">${item.icon}</p>
+        <div class="col" style="${textDecoration}">
         <h2>${item.name}</h2>
         <p>${item.categoryString}</p>
       </div>
@@ -276,16 +276,16 @@ function buildItemBuyList(item) {
         ${item.amount}
       </div>
       <div
-        class="form-check col-1 d-flex justify-content-center align-items-center"
+        class=" m-2 form-check col-2 col-lg-2 d-flex justify-content-center align-items-center"
       >
         <input
-        class="form-check-input m-2"
+        class="form-check-input m-2 "
         type="checkbox"
         ${checkedAttribute}
         onchange="markItemAsBought(${item.id}, this)"
       />
         <label class="form-check-label" for="flexCheckDefault"> קניתי </label>
-
+      </div>
     `;
 
   return itemDiv;

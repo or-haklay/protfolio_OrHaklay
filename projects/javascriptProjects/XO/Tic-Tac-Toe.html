@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Tic-Tac-Toe.css" />
+    <script src="./Tic-Tac-Toe.js" defer></script>
+    <title>Tic-Tac-Toe</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <h1></h1>
+    <div class="game-container">
+      <div id="board">
+        <div class="cell" id="0" cell-status="null"></div>
+        <div class="cell" id="1" cell-status="null"></div>
+        <div class="cell" id="2" cell-status="null"></div>
+        <div class="cell" id="3" cell-status="null"></div>
+        <div class="cell" id="4" cell-status="null"></div>
+        <div class="cell" id="5" cell-status="null"></div>
+        <div class="cell" id="6" cell-status="null"></div>
+        <div class="cell" id="7" cell-status="null"></div>
+        <div class="cell" id="8" cell-status="null"></div>
+      </div>
+
+      <div class="info">
+        <p id="status">Player X's turn</p>
+        <button id="reset">Reset Game</button>
+
+        <div class="winningBoard">
+          <p>Winning Board:</p>
+          <p id="xWinsElement">X Wins: 0</p>
+          <p id="oWinsElement">O Wins: 0</p>
+          <p id="roundElement"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

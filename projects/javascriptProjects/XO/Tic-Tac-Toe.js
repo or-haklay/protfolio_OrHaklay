@@ -13,21 +13,23 @@ const statusElement = document.getElementById("status");
 const resetButton = document.getElementById("reset");
 const xWinsElement = document.getElementById("xWinsElement");
 const oWinsElement = document.getElementById("oWinsElement");
-const roundElement = document.getElementById("roundElement")
-
+const roundElement = document.getElementById("roundElement");
 
 // אירוע קליק על ריבוע
 function handleCellClick(event) {
-  if (isGameActive == true && event.target.getAttribute('cell-status') == 'null') {
+  if (
+    isGameActive == true &&
+    event.target.getAttribute("cell-status") == "null"
+  ) {
     round++;
     const index = event.target.getAttribute("id");
 
     /* event.target.textContent = currentPlayer; */
-    event.target.innerHTML = `<img src="./images/${currentPlayer}.png" alt="${currentPlayer}" class="playerImg"></img>`
-    event.target['cell-status'] = currentPlayer;
+    event.target.innerHTML = `<img src="./images/${currentPlayer}.png" alt="${currentPlayer}" class="playerImg"></img>`;
+    event.target["cell-status"] = currentPlayer;
     board[index] = currentPlayer;
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    statusElement.innerText = `Player ${currentPlayer}'s turn`
+    statusElement.innerText = `Player ${currentPlayer}'s turn`;
     check();
   }
 }
@@ -46,7 +48,6 @@ const winPatterns = [
   [2, 4, 6],
 ];
 
-
 function check() {
   for (let pattern of winPatterns) {
     const [a, b, c] = pattern;
@@ -57,16 +58,15 @@ function check() {
     if (board[a] == "O" || board[a] == "X") {
       if (board[a] == board[b] && board[b] == board[c]) {
         statusElement.innerText = `The Winner is ${first} `;
-        document.getElementById(a).style.backgroundColor = '#4caf50'
-        document.getElementById(b).style.backgroundColor = '#4caf50'
-        document.getElementById(c).style.backgroundColor = '#4caf50'
+        document.getElementById(a).style.backgroundColor = "#4caf50";
+        document.getElementById(b).style.backgroundColor = "#4caf50";
+        document.getElementById(c).style.backgroundColor = "#4caf50";
         first == "X" ? xWins++ : oWins++;
         updateWinninng();
-        return isGameActive = false;
-      }
-      else if (round === 9) {
+        return (isGameActive = false);
+      } else if (round === 9) {
         statusElement.innerText = `It's a Draw... Let's Play Again! `;
-        return isGameActive = false;
+        return (isGameActive = false);
       }
     }
   }
@@ -77,16 +77,12 @@ function updateWinninng() {
   oWinsElement.innerHTML = `O Wins: ${oWins}`;
 }
 
-resetButton.addEventListener('click', () => {
+resetButton.addEventListener("click", () => {
   currentPlayer = "X";
   isGameActive = true;
   round = 0;
   board = Array(9).fill(null);
-  statusElement.innerText = `Player ${currentPlayer} 's turn`
-  cells.forEach((cell) => cell.textContent = '');
-  cells.forEach((cell) => cell.style.backgroundColor = '#fff');
-
-})
-
-
-
+  statusElement.innerText = `Player ${currentPlayer} 's turn`;
+  cells.forEach((cell) => (cell.textContent = ""));
+  cells.forEach((cell) => (cell.style.backgroundColor = "#fff"));
+});

@@ -1,279 +1,396 @@
 <!DOCTYPE html>
 <html lang="HE" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Or Haklay's Protfolio</title>
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="shortcut icon" href="./images/icon1.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Or Haklay's Portfolio</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="shortcut icon" href="./images/icon1.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Pacifico&family=Playwrite+IE+Guides&display=swap"
-        rel="stylesheet">
-    
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Pacifico&family=Playwrite+IE+Guides&display=swap"
+      rel="stylesheet"
+    />
 
-     <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "VV8IU9TS7V8Bfno9O",
-            });
-        })();
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "VV8IU9TS7V8Bfno9O",
+        });
+      })();
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('service_knontvu', 'template_2byk7sb', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_knontvu", "template_2byk7sb", this).then(
+              () => {
+                console.log("SUCCESS!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- כותרת האתר -->
     <header>
-        <div class="container">
-            <label for="hamburgerButtom" class="logoName"><img src="images/profile.jpg" alt="Or Haklay"> Or
-                Haklay</label>
-            <input type="checkbox" id="hamburgerButtom" class="hamburgerCheck">
-            <nav>
-                <ul>
-                    <li><a href="#">ראשי</a></li>
-                    <li><a href="#about">אודות</a></li>
-                    <li><a href="#gallery">גלריה</a></li>
-                    <li><a href="#contact">צור קשר</a></li>
-                </ul>
-            </nav>
-
-        </div>
+      <div class="cont">
+        <label for="hamburgerButtom" class="logoName"
+          ><img src="./images/profile.jpg" alt="Or Haklay" /> Or Haklay</label
+        >
+        <input type="checkbox" id="hamburgerButtom" class="hamburgerCheck" />
+        <nav>
+          <ul>
+            <li><a href="#">ראשי</a></li>
+            <li><a href="#about">אודות</a></li>
+            <li><a href="#gallery_html">גלריה</a></li>
+            <li><a href="#contact">צור קשר</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- גוף האתר -->
     <main>
+      <section id="main">
+        <div id="mainText">
+          <h1>תיק עבודות אישי</h1>
+          <p>
+            ברוכים הבאים לתיק העבודות שלי!<br />כאן תוכלו לראות פרויקטים
+            שפיתחתי, המשלבים יצירתיות, חדשנות ותכנות מתקדם. מוזמנים לעיין ולהכיר
+            את מה שאני עושה.
+          </p>
+        </div>
+        <div class="languages">
+          <div class="cont">
+            <img src="./images/img-HTML@2x.png" alt="html" title="html" />
+            <img src="./images/img-CSS@2x.png" alt="css" title="css" />
+            <img
+              src="./images/img-Bootstrap@2x.png"
+              alt="bootstrap"
+              title="bootstrap"
+            />
+            <img src="./images/img-SASS@2x.png" alt="sass" title="sass" />
+            <img
+              src="./images/img-JS@2x.png"
+              alt="javascript"
+              title="javascript"
+            />
+            <img src="./images/img-OOP@2x.png" alt="oop" title="oop" />
+            <img src="./images/img-ES6@2x.png" alt="es6" title="es6" />
+            <img
+              src="./images/img-TypeScript@2x.png"
+              alt="typescript"
+              title="typescript"
+            />
+            <img src="./images/img-API@2x.png" alt="api" title="api" />
+            <img src="./images/img-React@2x.png" alt="react" title="react" />
+            <img src="./images/img-NodeJS@2x.png" alt="nodejs" title="nodejs" />
+          </div>
+        </div>
+      </section>
 
-        <section id="main">
-            <div id="mainText">
-                <h1>תיק עבודות אישי</h1>
-                <p>ברוכים הבאים לתיק העבודות שלי!<br>כאן תוכלו לראות פרויקטים שפיתחתי, המשלבים יצירתיות, חדשנות ותכנות
-                    מתקדם.
-                    מוזמנים לעיין
-                    ולהכיר את מה שאני עושה.</p>
+      <section id="about">
+        <img src="./images/profile.jpg" alt="Or Haklay" />
+        <div class="aboutText">
+          <h1>קצת עליי</h1>
+          <p>
+            שמי אור חקלאי, אני בן 23 וגר במושב רם און שבצפון הארץ. אני מפתח
+            אתרים עם תשוקה לחדשנות ופתרון בעיות טכנולוגיות.<br />רכשתי ניסיון
+            בעבודה עם טכנולוגיות מתקדמות, ואני משלב עיצוב מודרני עם פיתוח מדויק
+            ליצירת אתרים ואפליקציות מותאמים אישית.<br />
+            אני מאמין בלמידה מתמדת ובשימוש ביכולותיי כדי להעניק ערך מוסף לכל
+            פרויקט שאני לוקח על עצמי.
+          </p>
+        </div>
+        <a href=".images/קורות חיים - אור חקלאי.pdf" download="orHaklay.pdf"
+          >להורדת קורות חיים לחץ כאן</a
+        >
+      </section>
+
+      <section id="gallery_html">
+        <h1>דפי נחיתה</h1>
+        <div class="galleryClass">
+          <div class="galleryItem">
+            <img
+              src="./projects/htmlProjects/coffee/theLandingPage_coffee.png"
+              alt="project1"
+            />
+            <h2>Project 1</h2>
+            <p>
+              "קפה טוב לבוקר טוב" הוא עמוד נחיתה ייחודי המעוצב בצורה מקצועית,
+              מזמינה ונקייה. העמוד נועד למשוך לקוחות פוטנציאליים לבית הקפה על
+              ידי הצעת קופון לקפה חינם בתמורה להשארת פרטים אישיים.
+            </p>
+            <a href="./projects/htmlProjects/coffee/coffeProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="./projects/htmlProjects/project2/theLandingPage_project2.png"
+              alt="project2"
+            />
+            <h2>Project 2</h2>
+            <p>
+              עמוד הנחיתה "Here & Now" מעוצב במראה נקי, מודרני ומזמין. הרקע כולל
+              מעבר צבעים ייחודי וכחול-ירוק, שמשרה תחושת רוגע ורעננות.<br />
+              הכותרת הבולטת במרכז, "Here & Now", משדרת מסר של נוכחות וערך מיידי.
+            </p>
+            <a href="./projects/htmlProjects/project2/project2ProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="./projects/htmlProjects/project3/theLandingPage_project3.png"
+              alt="project3"
+            />
+            <h2>Project 3</h2>
+            <p>
+              עמוד הנחיתה בנוי בעיצוב מודרני ומושך את העין, עם רקע ורוד-סגול
+              בגוונים משתנים שמוסיף מראה דינמי ואנרגטי. הרקע כולל גם אלמנטים
+              גיאומטריים עדינים שמעשירים את העיצוב בצורה אלגנטית מבלי להסיח את
+              הדעת.
+            </p>
+            <a href="./projects/htmlProjects/project3/project3ProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="./projects/htmlProjects/project4/theLandingPage_project4.png"
+              alt="project4"
+            />
+            <h2>Project 4</h2>
+            <p>
+              עמוד הנחיתה בנוי בעיצוב מודרני ומושך את העין, עם רקע כחול-וצהוב
+              בגוונים משתנים שמוסיף מראה דינמי ואנרגטי. הרקע כולל גם אלמנטים
+              גיאומטריים עדינים שמעשירים את העיצוב בצורה אלגנטית מבלי להסיח את
+              הדעת.
+            </p>
+            <a href="./projects/htmlProjects/project4/project4ProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="./projects/htmlProjects/project5/theLandingPage_project5.png"
+              alt="project5"
+            />
+            <h2>Project 5</h2>
+            <p>
+              עמוד חוויתי המעודד שיתוף סיפורים אישיים על טיולים, עם גלריית
+              תמונות צבעונית וטופס השארת פרטים. העיצוב שואב השראה מתרבויות וטבע,
+              ויוצר תחושת מסע והשראה.
+            </p>
+            <a href="./projects/htmlProjects/project5/project5ProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="./projects/htmlProjects/project6/theLandingPage_project6.png"
+              alt="project6"
+            />
+            <h2>Project 6</h2>
+            <p>
+              וד נחיתה נקי ופשוט להזמנת ייעוץ חינם, עם טופס השארת פרטים
+              ואייקונים ליצירת קשר ברשתות החברתיות. העיצוב בצבעי צהוב ושחור
+              מייצר תחושת מקצועיות ונגישות
+            </p>
+            <a href="./projects/htmlProjects/project6/project6ProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery_JS">
+        <h1>עבודות JavaScript</h1>
+        <div class="galleryClass">
+          <div class="galleryItem">
+            <img
+              src="./projects/javascriptProjects/galleryApp/theLandingPage_Gallery.png"
+              alt="project1"
+            />
+            <h2>Gallery App</h2>
+            <p>
+              אפליקציית גלרית תמונות. ניתן להירשם ולהתחבר למשתמש, כל משתמש יכול
+              לתת לייק לכל תמונה או להוריד לייק. בנוסף ניתן לראות כמה משתמשים
+              שונים נתנו לייק לכל תמונה.
+            </p>
+            <a
+              href="./projects/javascriptProjects/galleryApp/galleryProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="./projects/javascriptProjects/Market List/theLandingPage_Market.png"
+              alt="Market List"
+            />
+            <h2>Market List</h2>
+            <p>
+              אפליקציה לניהול רשימת קניות, מאפשרת למשתמש להוסיף מוצרים ומציגה לו
+              על פי קטגוריות. הרשימה נשמרת בזיכרון המקומי ולכן אפשר לחזור
+              ולהוסיף לרשימה מוצרים גם לאחר שיצאנו.
+            </p>
+            <a
+              href="/projects/javascriptProjects/Market List/marketProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="./projects/javascriptProjects/mineSweeper/theLandingPage_MineSweeper.png"
+              alt="Mine Sweeper"
+            />
+            <h2>Mine Sweeper</h2>
+            <p>
+              משחק שולה המושקשים. מאפשר למשתמש לבחור בין 3 רמות קושי ובונה את
+              הלוח בהתאם. ניתן למסן סעזרת המקש הימני מיקומים שאתם חושדים שבהם יש
+              פצצות.
+            </p>
+            <a
+              href="./projects/javascriptProjects/mineSweeper/mineSweeperProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="/projects/javascriptProjects/triviaGame/theLandingPage_Trivia.png"
+              alt="trivia"
+            />
+            <h2>trivia Game</h2>
+            <p>
+              משחק טריוויה על זמן, לאחר בחירת קטגוריה, יש 60 שניות לכל שאלה.
+              לאחר המשחק תוצג התוצאה ותוכל לבחור האם לחזור למסך הבית או להמשיך
+              באותו נושא.
+            </p>
+            <a
+              href="./projects/javascriptProjects/triviaGame/triviaProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="/projects/javascriptProjects/weatherApp/theLandingPage_Weather.png"
+              alt="weatherApp"
+            />
+            <h2>Weather App</h2>
+            <p>
+              אפליקציית מזג האוויר מאפשרת לבדוק מזג אוויר לפי עיר בעולם. ניתן
+              לשמור עיר ברירת מחדל שתופיע כל פעם שהאפליקציה תפתח. האפליקציה
+              משתמש בAPI למשיכת הנתונים.
+            </p>
+            <a
+              href="/projects/javascriptProjects/weatherApp/weatherProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+
+          <div class="galleryItem">
+            <img
+              src="/projects/javascriptProjects/XO/theLandingPage_XO.png"
+              alt="Tic-Tac-Toe"
+            />
+            <h2>Tic-Tac-Toe</h2>
+            <p>
+              משחק איקס עיגול פשוט, מציג ניצחון או תיקו ומסמן מה היה הניצחון
+              בהתאם. בנוסף מציג את הכמות נצחונות של כגל שחקן.
+            </p>
+            <a href="/projects/javascriptProjects/XO/xoProjectPage.html"
+              >למעבר לפרוייקט</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <img src="images/Rectangle 41@2x.png" alt="contact" />
+        <form id="contact-form">
+          <h1>צור קשר</h1>
+          <p>אשמח לשמוע ממך, תוכל לשלוח לי הודעה ואחזור אליך בהקדם.</p>
+          <label for="user_name">שם מלא:</label>
+          <input type="text" name="user_name" placeholder="ישראל ישראלי" />
+          <label for="user_email">אימייל:</label>
+          <input
+            type="email"
+            name="user_email"
+            placeholder="israel.israeli@gmail.com"
+          />
+          <label for="user_tel">טלפון:</label>
+          <input type="tel" name="user_tel" placeholder="055-5555555" />
+          <label for="message">תוכן ההודעה:</label>
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="מלל..."
+          ></textarea>
+          <input type="submit" value="שלח" />
+        </form>
+
+        <div class="contactWays">
+          <div class="cont">
+            <div class="mediaContact">
+              <img src="images/Icon awesome-facebook-f.svg" alt="facebook" />
+              <p>or haklay</p>
             </div>
-            <div class="languages">
-                <div class="container">
-                    <img src="/images/img-HTML@2x.png" alt="html" title="html">
-                    <img src="/images/img-CSS@2x.png" alt="css" title="css">
-                    <img src="/images/img-Bootstrap@2x.png" alt="bootstrap" title="bootstrap">
-                    <img src="/images/img-SASS@2x.png" alt="sass" title="sass">
-                    <img src="/images/img-JS@2x.png" alt="javascript" title="javascript">
-                    <img src="/images/img-OOP@2x.png" alt="oop" title="oop">
-                    <img src="/images/img-ES6@2x.png" alt="es6" title="es6">
-                    <img src="/images/img-TypeScript@2x.png" alt="typescript" title="typescript">
-                    <img src="/images/img-API@2x.png" alt="api" title="api">
-                    <img src="/images/img-React@2x.png" alt="react" title="react">
-                    <img src="/images/img-NodeJS@2x.png" alt="nodejs" title="nodejs">
-                </div>
+            <div class="mediaContact">
+              <img src="images/Icon awesome-linkedin-in.svg" alt="linkedin" />
+              <p>orhaklay</p>
             </div>
-        </section>
-
-        <section id="about">
-            <img src="images/profile.jpg" alt="Or Haklay">
-            <div class="aboutText">
-                <h1>קצת עליי</h1>
-                <p>שמי אור חקלאי, אני בן 23 וגר במושב רם און שבצפון הארץ. אני מפתח אתרים עם תשוקה לחדשנות ופתרון בעיות
-                    טכנולוגיות.<br>רכשתי ניסיון בעבודה עם טכנולוגיות מתקדמות, ואני משלב עיצוב מודרני עם פיתוח מדויק
-                    ליצירת אתרים
-                    ואפליקציות מותאמים
-                    אישית.<br> אני מאמין בלמידה מתמדת ובשימוש ביכולותיי כדי להעניק ערך מוסף לכל פרויקט שאני לוקח על
-                    עצמי.
-                </p>
+            <div class="mediaContact">
+              <img src="images/Icon simple-whatsapp-1.svg" alt="phone" />
+              <p>055-8827804</p>
             </div>
-            <a href="images/קורות חיים - אור חקלאי.pdf" download="orHaklay.pdf">להורדת קורות חיים לחץ כאן</a>
-        </section>
-
-        <section id="gallery_html">
-            <h1>עבודות נבחרות</h1>
-            <div class="galleryClass">
-                <div class="galleryItem">
-                    <img src="projects/coffee/theLandingPage_coffee.png" alt="project1">
-                    <h2>Project 1</h2>
-                    <p>"קפה טוב לבוקר טוב" הוא עמוד נחיתה ייחודי המעוצב בצורה מקצועית, מזמינה ונקייה. העמוד נועד למשוך
-                        לקוחות פוטנציאליים לבית
-                        הקפה על ידי הצעת קופון לקפה חינם בתמורה להשארת פרטים אישיים.</p>
-                    <a href="/projects/coffee/coffeProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project2/theLandingPage_project2.png" alt="project2">
-                    <h2>Project 2</h2>
-                    <p>עמוד הנחיתה "Here & Now" מעוצב במראה נקי, מודרני ומזמין. הרקע כולל מעבר צבעים ייחודי
-                        וכחול-ירוק, שמשרה תחושת
-                        רוגע ורעננות.<br> הכותרת הבולטת במרכז, "Here & Now", משדרת מסר של נוכחות וערך מיידי.</p>
-                    <a href="/projects/project2/project2ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project3/theLandingPage_project3.png" alt="project3">
-                    <h2>project 3</h2>
-                    <p>עמוד הנחיתה בנוי בעיצוב מודרני ומושך את העין, עם רקע ורוד-סגול בגוונים משתנים שמוסיף
-                        מראה
-                        דינמי ואנרגטי. הרקע
-                        כולל גם אלמנטים גיאומטריים עדינים שמעשירים את העיצוב בצורה אלגנטית מבלי להסיח את הדעת.</p>
-                    </p>
-                    <a href="/projects/project3/project3ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project4/theLandingPage_project4.png" alt="project4">
-                    <h2>Project 4</h2>
-                    <p>עמוד הנחיתה בנוי בעיצוב מודרני ומושך את העין, עם רקע כחול-וצהוב בגוונים משתנים שמוסיף
-                        מראה
-                        דינמי ואנרגטי. הרקע
-                        כולל גם אלמנטים גיאומטריים עדינים שמעשירים את העיצוב בצורה אלגנטית מבלי להסיח את הדעת.</p>
-                    <a href="/projects/project4/project4ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project5/theLandingPage_project5.png" alt="project5">
-                    <h2>Project 5</h2>
-                    <p>עמוד חוויתי המעודד שיתוף סיפורים אישיים על טיולים, עם גלריית תמונות צבעונית וטופס השארת פרטים.
-                        העיצוב שואב השראה מתרבויות וטבע, ויוצר תחושת מסע והשראה.</p>
-                    <a href="/projects/project5/project5ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project6/theLandingPage_project6.png" alt="project6">
-                    <h2>Project 6</h2>
-                    <p>וד נחיתה נקי ופשוט להזמנת ייעוץ חינם, עם טופס השארת פרטים ואייקונים ליצירת קשר ברשתות
-                        החברתיות.
-                        העיצוב בצבעי צהוב ושחור מייצר תחושת מקצועיות ונגישות</p>
-                    <a href="/projects/project6/project6ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
+            <div class="mediaContact">
+              <img src="images/Icon simple-whatsapp.svg" alt="whatsapp" />
+              <p style="direction: ltr">+972-558827804</p>
             </div>
-        </section>
-
-        <section id="gallery_JS">
-            <h1>עבודות JS</h1>
-            <div class="galleryClass">
-                <div class="galleryItem">
-                    <img src="projects/coffee/theLandingPage_coffee.png" alt="project1">
-                    <h2>Project 1</h2>
-                    <p>"קפה טוב לבוקר טוב" הוא עמוד נחיתה ייחודי המעוצב בצורה מקצועית, מזמינה ונקייה. העמוד נועד למשוך
-                        לקוחות פוטנציאליים לבית
-                        הקפה על ידי הצעת קופון לקפה חינם בתמורה להשארת פרטים אישיים.</p>
-                    <a href="/projects/coffee/coffeProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project2/theLandingPage_project2.png" alt="project2">
-                    <h2>Project 2</h2>
-                    <p>עמוד הנחיתה "Here & Now" מעוצב במראה נקי, מודרני ומזמין. הרקע כולל מעבר צבעים ייחודי
-                        וכחול-ירוק, שמשרה תחושת
-                        רוגע ורעננות.<br> הכותרת הבולטת במרכז, "Here & Now", משדרת מסר של נוכחות וערך מיידי.</p>
-                    <a href="/projects/project2/project2ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project3/theLandingPage_project3.png" alt="project3">
-                    <h2>project 3</h2>
-                    <p>עמוד הנחיתה בנוי בעיצוב מודרני ומושך את העין, עם רקע ורוד-סגול בגוונים משתנים שמוסיף
-                        מראה
-                        דינמי ואנרגטי. הרקע
-                        כולל גם אלמנטים גיאומטריים עדינים שמעשירים את העיצוב בצורה אלגנטית מבלי להסיח את הדעת.</p>
-                    </p>
-                    <a href="/projects/project3/project3ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project4/theLandingPage_project4.png" alt="project4">
-                    <h2>Project 4</h2>
-                    <p>עמוד הנחיתה בנוי בעיצוב מודרני ומושך את העין, עם רקע כחול-וצהוב בגוונים משתנים שמוסיף
-                        מראה
-                        דינמי ואנרגטי. הרקע
-                        כולל גם אלמנטים גיאומטריים עדינים שמעשירים את העיצוב בצורה אלגנטית מבלי להסיח את הדעת.</p>
-                    <a href="/projects/project4/project4ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project5/theLandingPage_project5.png" alt="project5">
-                    <h2>Project 5</h2>
-                    <p>עמוד חוויתי המעודד שיתוף סיפורים אישיים על טיולים, עם גלריית תמונות צבעונית וטופס השארת פרטים.
-                        העיצוב שואב השראה מתרבויות וטבע, ויוצר תחושת מסע והשראה.</p>
-                    <a href="/projects/project5/project5ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
-
-                <div class="galleryItem">
-                    <img src="/projects/project6/theLandingPage_project6.png" alt="project6">
-                    <h2>Project 6</h2>
-                    <p>וד נחיתה נקי ופשוט להזמנת ייעוץ חינם, עם טופס השארת פרטים ואייקונים ליצירת קשר ברשתות
-                        החברתיות.
-                        העיצוב בצבעי צהוב ושחור מייצר תחושת מקצועיות ונגישות</p>
-                    <a href="/projects/project6/project6ProjectPage.html">למעבר לפרוייקט</a>
-                </div>
+            <div class="mediaContact">
+              <img src="images/Icon simple-email.svg" alt="email" />
+              <p>or.haklay@gmail.com</p>
             </div>
-        </section>
-        <section id="contact">
-            <img src="images/Rectangle 41@2x.png" alt="contact">
-            <form id="contact-form">
-                <h1>צור קשר</h1>
-                <p>אשמח לשמוע ממך, תוכל לשלוח לי הודעה ואחזור אליך בהקדם.</p>
-                <label for="user_name">שם מלא:</label>
-                <input type="text" name="user_name" placeholder="ישראל ישראלי">
-                <label for="user_email">אימייל:</label>
-                <input type="email" name="user_email" placeholder="israel.israeli@gmail.com">
-                <label for="user_tel">טלפון:</label>
-                <input type="tel" name="user_tel" placeholder="055-5555555">
-                <label for="message">תוכן ההודעה:</label>
-                <textarea name="message" cols="30" rows="10" placeholder="מלל..."></textarea>
-                <input type="submit" value="שלח">
-            </form>
-
-            <div class="contactWays">
-                <div class="container">
-                    <div class="mediaContact">
-                        <img src="images/Icon awesome-facebook-f.svg" alt="facebook">
-                        <p>or haklay</p>
-                    </div>
-                    <div class="mediaContact">
-                        <img src="images/Icon awesome-linkedin-in.svg" alt="linkedin">
-                        <p>orhaklay</p>
-                    </div>
-                    <div class="mediaContact">
-                        <img src="images/Icon simple-whatsapp-1.svg" alt="phone">
-                        <p>055-8827804</p>
-                    </div>
-                    <div class="mediaContact">
-                        <img src="images/Icon simple-whatsapp.svg" alt="whatsapp">
-                        <p style="direction: ltr;">+972-558827804</p>
-                    </div>
-                    <div class="mediaContact">
-                        <img src="images/Icon simple-email.svg" alt="email">
-                        <p>or.haklay@gmail.com</p>
-                    </div>
-                    <div class="mediaContact">
-                        <img src="images/Icon material-location-on.svg" alt="location">
-                        <p>מושב רם-און</p>
-                    </div>
-                </div>
+            <div class="mediaContact">
+              <img src="images/Icon material-location-on.svg" alt="location" />
+              <p>מושב רם-און</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <div class="container">
-            <p id="footerText">כל הזכויות שמורות לאור חקלאי</p>
-            <p>or haklay 2024 &copy;</p>
-        </div>
+      <div class="cont">
+        <p id="footerText">כל הזכויות שמורות לאור חקלאי</p>
+        <p>or haklay 2024 &copy;</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

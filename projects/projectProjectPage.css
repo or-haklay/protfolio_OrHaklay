@@ -1,265 +1,272 @@
 /* הגדרות כלליות */
 * {
-    /* איפוס */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  /* איפוס */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    /* צבעים */
-    --primary-color: #1E3A8A;
-    --secondary-color: #333333;
-    --tertiary-color: #77B6EA;
-    --text-color: #FFFFFF;
-    --bgc-color: #F5F5F5;
-    --bold1-color: #F97316;
-    --bold2-color: #10B981;
+  /* צבעים */
+  --primary-color: #1e3a8a;
+  --secondary-color: #333333;
+  --tertiary-color: #77b6ea;
+  --text-color: #ffffff;
+  --bgc-color: #f5f5f5;
+  --bold1-color: #f97316;
+  --bold2-color: #10b981;
 }
 
 html {
-    /* גלילה חלקה */
-    scroll-behavior: smooth;
+  /* גלילה חלקה */
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--tertiary-color);
-    font-family: "Heebo", Arial, sans-serif;
+  background-color: var(--tertiary-color);
+  font-family: "Heebo", Arial, sans-serif;
 }
 
 h1 {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 20px;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 20px;
 }
 
 p {
-    font-size: 1.25rem;
-    text-align: center;
-    margin-top: 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* header*/
 header {
-    width: 100vw;
-    height: 70px;
-    box-shadow: 3px 3px 7px #000;
-    position: fixed;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    z-index: 10;
+  width: 100vw;
+  height: 70px;
+  box-shadow: 3px 3px 7px #000;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  z-index: 10;
 }
 
 .container {
-    max-width: 1200px;
-    width: 100vw;
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-    flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100vw;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 header .container {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .logoName {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: end;
-    font-family: "Pacifico", serif;
-    font-size: 1.75rem;
-    text-decoration: none;
-    align-items: center;
-    color: var(--text-color);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
+  font-family: "Pacifico", serif;
+  font-size: 1.75rem;
+  text-decoration: none;
+  align-items: center;
+  color: var(--text-color);
 }
 
 .logoName img {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 50%;
 }
 
 /* גוף האתר*/
 /* ראשי*/
 main {
-    position: relative;
-    top: 70px;
-    z-index: 1;
+  position: relative;
+  top: 70px;
+  z-index: 1;
 }
 
 #main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-image: url(/images/‏‏BG-Main-scaled2.jpg);
-    background-size: cover;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(/images/‏‏BG-Main-scaled2.jpg);
+  background-size: cover;
+  width: 100vw;
 }
 
 #mainText {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    justify-content: space-evenly;
-    max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  justify-content: space-evenly;
+  max-height: 500px;
 }
 
 #mainText p {
-    width: 80vw;
-    max-width: 600px;
+  width: 80vw;
+  max-width: 600px;
+}
+
+.projectsButtoms {
+  margin: 40px 20px 40px 20px;
 }
 
 #mainText a {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 1.25rem;
-    box-shadow: 2px 2px 2px #000;
-    margin: 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  box-shadow: 2px 2px 2px #000;
+  margin: 20px;
 }
 
 #mainText a:hover {
-    background-color: var(--bold1-color);
-    box-shadow: inset 2px 2px 2px #000;
-
+  background-color: var(--bold1-color);
+  box-shadow: inset 2px 2px 2px #000;
 }
 
 .languages {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFFFF;
-    width: 100vw;
-    box-shadow: 1px 1px 3px #000;
-    flex-wrap: wrap;
-    height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-wrap: wrap;
+  height: auto;
+  margin-top: 20px;
 }
 
 .languages .container {
-    justify-content: space-around;
+  justify-content: center;
+  gap: 30px;
 }
 
 .languages img {
-    width: 75px;
-    height: 75px;
-    margin: 10px;
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
 }
 
 .languages img:hover {
-    width: 100px;
-    height: 100px;
-    box-shadow: #000 2px 2px 5px;
+  width: 100px;
+  height: 100px;
+  box-shadow: #000 2px 2px 5px;
 }
 
 /* אודות */
 #media {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    background-color: #ffffff;
-    justify-content: space-evenly;
-    padding: 60px 20px 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-color: #ffffff;
+  justify-content: space-evenly;
+  padding: 60px 20px 60px 20px;
 }
 
 #media img {
-    width: 90vw;
-    box-shadow: 2px 2px 5px #000;
-    max-width: 960px;
-    box-shadow: #000 0px 0px 20px 2px;
+  width: 90vw;
+  box-shadow: 2px 2px 5px #000;
+  max-width: 960px;
+  box-shadow: #000 0px 0px 20px 2px;
 }
 
 /* צור קשר */
 #contact {
-    background-color: var(--secondary-color);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
-    flex-direction: row-reverse;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: row-reverse;
 }
 
 #contact .contactWays {
-    background-color: var(--tertiary-color);
-    display: flex;
-    width: 100vw;
-    flex-wrap: wrap;
+  background-color: var(--tertiary-color);
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
 }
 
 #contact .contactWays .container {
-    justify-content: center;
+  justify-content: center;
 }
 
 .mediaContact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary-color);
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+  padding: 20px;
 }
 
 .mediaContact img {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
 }
 
 /* footer*/
 footer {
-    width: 100vw;
-    height: 35px;
-    top: 70px;
-    box-shadow: 2px 2px 5px #000;
-    position: relative;
-    background-color: var(--primary-color);
-    color: var(--bgc-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 35px;
+  top: 70px;
+  box-shadow: 2px 2px 5px #000;
+  position: relative;
+  background-color: var(--primary-color);
+  color: var(--bgc-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /* טלפון */
 @media (max-width: 767.98px) {
+  /* footer*/
+  footer #footerText {
+    display: none;
+    margin: 20px;
+  }
 
-    /* footer*/
-    footer #footerText {
-        display: none;
-        margin: 20px;
-    }
+  #mainText a {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 2px 2px 2px #000;
+    margin: 20px;
+  }
 
-    #mainText a {
-        background-color: var(--primary-color);
-        color: var(--text-color);
-        padding: 10px 10px;
-        border-radius: 20px;
-        text-decoration: none;
-        font-size: 1rem;
-        box-shadow: 2px 2px 2px #000;
-        margin: 20px;
-    }
+  .mediaContact img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+  }
 
-    .mediaContact img {
-        width: 30px;
-        height: 30px;
-        margin: 10px;
-    }
+  .mediaContact p {
+    font-size: 1rem;
+  }
 
-    .mediaContact p {
-        font-size: 1rem;
-    }
+  .languages .container {
+    gap: 0px;
+  }
 }

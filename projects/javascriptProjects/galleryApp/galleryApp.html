@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery App</title>
+    <script defer src="galleryScript.js"></script>
+    <link rel="stylesheet" href="galleryStyle.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container" id="headerCont">
+        <div class="btnsControl">
+          <button id="signInBtn" style="display: block">Sign-In</button>
+          <button id="registerInBtn" style="display: block">Register</button>
+          <button id="signOutBtn" style="display: none">Sign-Out</button>
+        </div>
+        <p id="userNameElement">Guest</p>
+        <div id="signInScreen" style="display: none">
+          <form class="forme">
+            <input type="button" value="X" id="closeSignInBtn" />
+            <div class="formControl">
+              <label for="userSign">User Name:</label>
+              <input
+                type="text"
+                id="userSign"
+                name="userSign"
+                placeholder="user name"
+              />
+              <div class="formMassage" id="userSignMassage"></div>
+            </div>
+            <div class="formControl">
+              <label for="passwordSign">Password:</label>
+              <input
+                type="password"
+                name="passwordSign"
+                id="passwordSign"
+                placeholder="password"
+              />
+              <div class="formMassage" id="passwordSignMassage"></div>
+            </div>
+            <input type="button" value="Sign-In" onclick="signIn()" />
+          </form>
+        </div>
+        <div id="registerScreen" style="display: none">
+          <form class="forme">
+            <input type="button" value="X" id="closeRegisterBtn" />
+            <div class="formControl">
+              <label for="fnameRegister">First Name:</label>
+              <input
+                type="text"
+                id="fnameRegister"
+                name="fnameRegister"
+                placeholder="First Name"
+              />
+            </div>
+            <div class="formControl">
+              <label for="lnameRegister">Last Name:</label>
+              <input
+                type="text"
+                id="lnameRegister"
+                name="lnameRegister"
+                placeholder="Last Name"
+              />
+            </div>
+            <div class="formControl">
+              <label for="ageRegister">Age:</label>
+              <input
+                type="number"
+                id="ageRegister"
+                name="ageRegister"
+                placeholder="Age"
+              />
+            </div>
+            <div class="formControl">
+              <label for="userRegister">User Name:</label>
+              <input
+                type="text"
+                id="userRegister"
+                name="userRegister"
+                placeholder="user name"
+              />
+              <div class="formMassage" id="userRegisterMassage"></div>
+            </div>
+            <div class="formControl">
+              <label for="passwordRegister">Password:</label>
+              <input
+                type="password"
+                name="passwordRegister"
+                id="passwordRegister"
+                placeholder="password"
+              />
+              <div class="formMassage" id="passwordRegisterMassage"></div>
+            </div>
+            <input type="button" value="Register" onclick="register()" />
+          </form>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="container">
+      <div id="Gallery"></div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

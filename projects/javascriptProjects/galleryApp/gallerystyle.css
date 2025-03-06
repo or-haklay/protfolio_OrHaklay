@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: rgb(109, 71, 50);
+  --bg-color: #f1f3e8;
+  --card-color: #ececec;
+  --btn-color: cadetblue;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin: 10px 0;
+  height: 70px;
+  background-color: var(--main-color);
+}
+
+#headerCont {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.btnsControl {
+  display: flex;
+  gap: 10px;
+}
+
+#signInBtn,
+#signOutBtn,
+#registerInBtn {
+  padding: 5px 10px;
+  font-size: 1.25rem;
+  background-color: var(--btn-color);
+  color: #ececec;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+#userNameElement {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: #ececec;
+}
+
+#signInScreen,
+#registerScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #77777741;
+}
+
+.forme {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80vw;
+  max-width: 400px;
+  height: 60vh;
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.forme input {
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.forme input[type="button"] {
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--btn-color);
+
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#closeRegisterBtn,
+#closeSignInBtn {
+  padding: 5px;
+  align-self: flex-end;
+  background-color: rgb(221, 117, 117);
+  border-radius: 5px;
+  color: #ececec;
+  font-weight: bold;
+}
+
+input[type="button"]:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.formMassage {
+  font-size: 0.85rem;
+  color: red;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+#Gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  border: 1px solid #7c7c7c;
+  background-color: var(--bg-color);
+  padding: 20px;
+  margin: 20px;
+}
+
+.photoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #000;
+  background-color: var(--card-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.imgControl {
+  margin: 10px;
+  height: 80%;
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.imgControl img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cardControl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.photographer {
+  font-size: 1rem;
+}
+
+.liked {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.likeBtn {
+  background-color: #ddd;
+  color: black;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.likeBtn:hover {
+  background-color: #bbb;
+}
+
+footer {
+  margin: 10px 0;
+  height: 50px;
+  background-color: var(--main-color);
+}
